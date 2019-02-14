@@ -12,20 +12,20 @@ struct RenderConfig {
     let lineWidth: CGFloat
     let lineAlpha: CGFloat
     let scale: CGFloat
-    let skippedSteps: Int
+    let drawEveryNStep: Int
     
     static var defaultGrille: RenderConfig {
-        return RenderConfig(lineWidth: 0.5, lineAlpha: 0.02, scale: 2, skippedSteps: 1)
+        return RenderConfig(lineWidth: 0.5, lineAlpha: 0.05, scale: 2, drawEveryNStep: 1)
     }
     
     static var defaultRond: RenderConfig {
-        return RenderConfig(lineWidth: 0.5, lineAlpha: 0.02, scale: 2, skippedSteps: 3)
+        return RenderConfig(lineWidth: 0.5, lineAlpha: 0.02, scale: 2, drawEveryNStep: 3)
     }
 }
 
 extension RenderConfig : Configurable {
     var description: String {
-        return "\(lineWidth)pt, α=\(lineAlpha), @\(scale)x, skip \(skippedSteps)"
+        return "\(lineWidth)pt, α=\(lineAlpha), @\(scale)x, every \(drawEveryNStep)"
     }
     
     static var all: [RenderConfig] {

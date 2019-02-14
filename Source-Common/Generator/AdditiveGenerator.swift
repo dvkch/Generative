@@ -73,7 +73,7 @@ class AdditiveGenerator {
             
             colorsConfig.linesColor.setStroke()
             
-            for step in stride(from: prevStep, to: maxStep, by: renderConfig.skippedSteps) {
+            for step in stride(from: prevStep, to: maxStep, by: renderConfig.drawEveryNStep) {
                 draw(step: step, drawRect: drawRect)
             }
             
