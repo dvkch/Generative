@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		85083A08C7329C40AB9EB67E /* Pods_Grille.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24EDFAF08F8E13541E07A71 /* Pods_Grille.framework */; };
+		972314DA22156DA9008F4C5F /* AdditiveGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314D922156DA9008F4C5F /* AdditiveGenerator.swift */; };
+		972314DB22156DA9008F4C5F /* AdditiveGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314D922156DA9008F4C5F /* AdditiveGenerator.swift */; };
+		972314DD22156DEE008F4C5F /* ColorsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314DC22156DEE008F4C5F /* ColorsConfig.swift */; };
+		972314DE22156DEE008F4C5F /* ColorsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314DC22156DEE008F4C5F /* ColorsConfig.swift */; };
+		972314E122156E89008F4C5F /* RenderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E022156E89008F4C5F /* RenderConfig.swift */; };
+		972314E222156E89008F4C5F /* RenderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E022156E89008F4C5F /* RenderConfig.swift */; };
 		97262C73221563060004697D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C72221563060004697D /* AppDelegate.swift */; };
 		97262C75221563060004697D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C74221563060004697D /* ViewController.swift */; };
 		97262C78221563060004697D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97262C76221563060004697D /* Main.storyboard */; };
@@ -18,8 +24,8 @@
 		97262C8E2215631A0004697D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97262C8C2215631A0004697D /* Main.storyboard */; };
 		97262C902215631A0004697D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97262C8F2215631A0004697D /* Assets.xcassets */; };
 		97262C932215631A0004697D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97262C912215631A0004697D /* LaunchScreen.storyboard */; };
-		97CC05B82215644000780F94 /* GridGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05B72215643F00780F94 /* GridGenerator.swift */; };
-		97CC05BA2215644700780F94 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05B92215644700780F94 /* Generator.swift */; };
+		97CC05B82215644000780F94 /* GrilleGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05B72215643F00780F94 /* GrilleGenerator.swift */; };
+		97CC05BA2215644700780F94 /* RondGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05B92215644700780F94 /* RondGenerator.swift */; };
 		97CC05BB2215644A00780F94 /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C67221562F50004697D /* Benchmark.swift */; };
 		97CC05BC2215644A00780F94 /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C68221562F50004697D /* Maths.swift */; };
 		97CC05BD2215644A00780F94 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C69221562F50004697D /* Points.swift */; };
@@ -30,10 +36,10 @@
 		97CC05C22215644B00780F94 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C69221562F50004697D /* Points.swift */; };
 		97CC05C32215644B00780F94 /* UIBezierPath+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C6A221562F50004697D /* UIBezierPath+SY.swift */; };
 		97CC05C42215644B00780F94 /* UIColor+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C6B221562F50004697D /* UIColor+SY.swift */; };
-		97CC05CA2215650700780F94 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05C92215650700780F94 /* Configs.swift */; };
+		97CC05CA2215650700780F94 /* RondConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05C92215650700780F94 /* RondConfig.swift */; };
 		97CC05CC2215651800780F94 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05CB2215651800780F94 /* Configurable.swift */; };
 		97CC05CD2215651800780F94 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05CB2215651800780F94 /* Configurable.swift */; };
-		97CC05CF221566BE00780F94 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05CE221566BE00780F94 /* Configs.swift */; };
+		97CC05CF221566BE00780F94 /* GrilleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05CE221566BE00780F94 /* GrilleConfig.swift */; };
 		A12E7CC753F6DA9A816F051F /* Pods_Rond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ED69A5973B0A1485EB08D9 /* Pods_Rond.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +47,9 @@
 		0E6759E33F70D7FC7FCDD078 /* Pods-Grille.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grille.debug.xcconfig"; path = "Target Support Files/Pods-Grille/Pods-Grille.debug.xcconfig"; sourceTree = "<group>"; };
 		50ED69A5973B0A1485EB08D9 /* Pods_Rond.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rond.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA884E1D31F016C6BC1DC8E /* Pods-Rond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rond.debug.xcconfig"; path = "Target Support Files/Pods-Rond/Pods-Rond.debug.xcconfig"; sourceTree = "<group>"; };
+		972314D922156DA9008F4C5F /* AdditiveGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditiveGenerator.swift; sourceTree = "<group>"; };
+		972314DC22156DEE008F4C5F /* ColorsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsConfig.swift; sourceTree = "<group>"; };
+		972314E022156E89008F4C5F /* RenderConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderConfig.swift; sourceTree = "<group>"; };
 		97262C67221562F50004697D /* Benchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
 		97262C68221562F50004697D /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
 		97262C69221562F50004697D /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
@@ -60,11 +69,11 @@
 		97262C8F2215631A0004697D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97262C922215631A0004697D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97262C942215631A0004697D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97CC05B72215643F00780F94 /* GridGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridGenerator.swift; sourceTree = "<group>"; };
-		97CC05B92215644700780F94 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
-		97CC05C92215650700780F94 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		97CC05B72215643F00780F94 /* GrilleGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrilleGenerator.swift; sourceTree = "<group>"; };
+		97CC05B92215644700780F94 /* RondGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RondGenerator.swift; sourceTree = "<group>"; };
+		97CC05C92215650700780F94 /* RondConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RondConfig.swift; sourceTree = "<group>"; };
 		97CC05CB2215651800780F94 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
-		97CC05CE221566BE00780F94 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		97CC05CE221566BE00780F94 /* GrilleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrilleConfig.swift; sourceTree = "<group>"; };
 		9D7741972A80571BA1AF4765 /* Pods-Grille.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grille.release.xcconfig"; path = "Target Support Files/Pods-Grille/Pods-Grille.release.xcconfig"; sourceTree = "<group>"; };
 		D24EDFAF08F8E13541E07A71 /* Pods_Grille.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grille.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94F6F07691516271CB81EAE /* Pods-Rond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rond.release.xcconfig"; path = "Target Support Files/Pods-Rond/Pods-Rond.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +119,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		972314DF22156DF5008F4C5F /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				972314D922156DA9008F4C5F /* AdditiveGenerator.swift */,
+				97CC05CB2215651800780F94 /* Configurable.swift */,
+				972314DC22156DEE008F4C5F /* ColorsConfig.swift */,
+				972314E022156E89008F4C5F /* RenderConfig.swift */,
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
 		97262C48221562A90004697D = {
 			isa = PBXGroup;
 			children = (
@@ -134,8 +154,8 @@
 		97262C66221562F50004697D /* Source-Common */ = {
 			isa = PBXGroup;
 			children = (
+				972314DF22156DF5008F4C5F /* Generator */,
 				97262C67221562F50004697D /* Benchmark.swift */,
-				97CC05CB2215651800780F94 /* Configurable.swift */,
 				97262C68221562F50004697D /* Maths.swift */,
 				97262C69221562F50004697D /* Points.swift */,
 				97262C6A221562F50004697D /* UIBezierPath+SY.swift */,
@@ -147,8 +167,8 @@
 		97262C71221563060004697D /* Source-Rond */ = {
 			isa = PBXGroup;
 			children = (
-				97CC05C92215650700780F94 /* Configs.swift */,
-				97CC05B92215644700780F94 /* Generator.swift */,
+				97CC05C92215650700780F94 /* RondConfig.swift */,
+				97CC05B92215644700780F94 /* RondGenerator.swift */,
 				97262C74221563060004697D /* ViewController.swift */,
 				97262C76221563060004697D /* Main.storyboard */,
 				97CC05C7221564DF00780F94 /* Misc */,
@@ -159,8 +179,8 @@
 		97262C872215631A0004697D /* Source-Grille */ = {
 			isa = PBXGroup;
 			children = (
-				97CC05CE221566BE00780F94 /* Configs.swift */,
-				97CC05B72215643F00780F94 /* GridGenerator.swift */,
+				97CC05CE221566BE00780F94 /* GrilleConfig.swift */,
+				97CC05B72215643F00780F94 /* GrilleGenerator.swift */,
 				97262C8A2215631A0004697D /* ViewController.swift */,
 				97262C8C2215631A0004697D /* Main.storyboard */,
 				97CC05C8221564ED00780F94 /* Misc */,
@@ -426,15 +446,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				97CC05CC2215651800780F94 /* Configurable.swift in Sources */,
-				97CC05BA2215644700780F94 /* Generator.swift in Sources */,
+				97CC05BA2215644700780F94 /* RondGenerator.swift in Sources */,
 				97CC05BB2215644A00780F94 /* Benchmark.swift in Sources */,
 				97262C75221563060004697D /* ViewController.swift in Sources */,
 				97CC05BC2215644A00780F94 /* Maths.swift in Sources */,
 				97CC05BD2215644A00780F94 /* Points.swift in Sources */,
+				972314E122156E89008F4C5F /* RenderConfig.swift in Sources */,
+				972314DA22156DA9008F4C5F /* AdditiveGenerator.swift in Sources */,
 				97262C73221563060004697D /* AppDelegate.swift in Sources */,
+				972314DD22156DEE008F4C5F /* ColorsConfig.swift in Sources */,
 				97CC05BE2215644A00780F94 /* UIBezierPath+SY.swift in Sources */,
 				97CC05BF2215644A00780F94 /* UIColor+SY.swift in Sources */,
-				97CC05CA2215650700780F94 /* Configs.swift in Sources */,
+				97CC05CA2215650700780F94 /* RondConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,13 +465,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97CC05B82215644000780F94 /* GridGenerator.swift in Sources */,
+				97CC05B82215644000780F94 /* GrilleGenerator.swift in Sources */,
 				97CC05C02215644B00780F94 /* Benchmark.swift in Sources */,
 				97262C8B2215631A0004697D /* ViewController.swift in Sources */,
 				97CC05C12215644B00780F94 /* Maths.swift in Sources */,
 				97CC05C22215644B00780F94 /* Points.swift in Sources */,
-				97CC05CF221566BE00780F94 /* Configs.swift in Sources */,
+				97CC05CF221566BE00780F94 /* GrilleConfig.swift in Sources */,
+				972314E222156E89008F4C5F /* RenderConfig.swift in Sources */,
+				972314DB22156DA9008F4C5F /* AdditiveGenerator.swift in Sources */,
 				97262C892215631A0004697D /* AppDelegate.swift in Sources */,
+				972314DE22156DEE008F4C5F /* ColorsConfig.swift in Sources */,
 				97CC05CD2215651800780F94 /* Configurable.swift in Sources */,
 				97CC05C32215644B00780F94 /* UIBezierPath+SY.swift in Sources */,
 				97CC05C42215644B00780F94 /* UIColor+SY.swift in Sources */,

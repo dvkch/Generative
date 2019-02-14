@@ -13,8 +13,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        segmentsConfigs.updateWithConfigurable(configurable: CircleGeneratorConfig.self)
-        segmentsColors.updateWithConfigurable(configurable: DrawingConfig.self)
+        segmentsConfigs.updateWithConfigurable(configurable: RondConfig.self)
+        segmentsColors.updateWithConfigurable(configurable: ColorsConfig.self)
 
         stepSlider.maximumTrackTintColor = .gray
         hqButton.layer.cornerRadius = 5
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: Generation
-    var generator: CircleGenerator?
+    var generator: RondGenerator?
     
     // MARK: Views
     @IBOutlet var segmentsConfigs: UISegmentedControl!
@@ -43,8 +43,8 @@ class ViewController: UIViewController {
         generator = nil
         updateImageAndStepper()
         
-        let config = CircleGeneratorConfig.all[self.segmentsConfigs.selectedSegmentIndex]
-        let colors = DrawingConfig.all[self.segmentsColors.selectedSegmentIndex]
+        let config = RondConfig.all[self.segmentsConfigs.selectedSegmentIndex]
+        let colors = ColorsConfig.all[self.segmentsColors.selectedSegmentIndex]
         
         view.backgroundColor = colors.backgroundColor
         segmentsConfigs.tintColor = colors.linesColor
@@ -57,10 +57,15 @@ class ViewController: UIViewController {
         SVProgressHUD.show()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.generator = CircleGenerator(renderSize: self.imageView.bounds.size, config: config, colors: colors)
+            self.generator = RondGenerator(
+                renderSize: self.imageView.bounds.size,
+                rondConfig: config,
+                renderConfig: RenderConfig.defaultRond,
+                colorsConfig: colors
+            )
             
             self.stepSlider.minimumValue = 0
-            self.stepSlider.maximumValue = Float(self.generator!.config.iterations) - 1
+            self.stepSlider.maximumValue = Float(self.generator!.rondConfig.iterations) - 1
             
             self.updateImageAndStepper()
             SVProgressHUD.dismiss()
@@ -73,7 +78,7 @@ class ViewController: UIViewController {
         hqButton.isHidden = generator == nil
         stepLabel.isHidden = generator == nil
         stepLabel.text = String(step + 1)
-        imageView.image = generator?.draw(step: step)
+        imageView.image = generator?.draw(until: step)
     }
     
     // MARK: Actions
@@ -92,13 +97,18 @@ class ViewController: UIViewController {
     @IBAction private func hqButtonTap() {
         SVProgressHUD.show()
         
-        let config = CircleGeneratorConfig.all[self.segmentsConfigs.selectedSegmentIndex]
-        let colors = DrawingConfig.all[self.segmentsColors.selectedSegmentIndex]
+        let config = RondConfig.all[self.segmentsConfigs.selectedSegmentIndex]
+        let colors = ColorsConfig.all[self.segmentsColors.selectedSegmentIndex]
         let step = Int(stepSlider.value)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            let gen = CircleGenerator(renderSize: CGSize(width: 1000, height: 1000), config: config, colors: colors)
-            let image = gen.draw(step: step)
+            let gen = RondGenerator(
+                renderSize: CGSize(width: 1000, height: 1000),
+                rondConfig: config,
+                renderConfig: RenderConfig.defaultRond,
+                colorsConfig: colors
+            )
+            let image = gen.draw(until: step)
             self.imageView.image = image
             SVProgressHUD.dismiss()
         }

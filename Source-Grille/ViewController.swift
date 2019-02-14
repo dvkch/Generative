@@ -12,13 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        generator = GridGenerator(
+        generator = GrilleGenerator(
             renderSize: imageView.bounds.size,
-            gridConfig: GridConfig.default,
-            drawingConfig: DrawingConfig.default
+            grilleConfig: GrilleConfig.default,
+            renderConfig: RenderConfig.defaultGrille,
+            colorsConfig: ColorsConfig.black
         )
         stepSlider.minimumValue = 0
-        stepSlider.maximumValue = Float(generator.gridConfig.iterations)
+        stepSlider.maximumValue = Float(generator.grilleConfig.iterations)
         stepChanged()
     }
 
@@ -28,11 +29,11 @@ class ViewController: UIViewController {
     @IBOutlet var stepLabel: UILabel!
 
     // MARK: Generation
-    var generator: GridGenerator!
+    var generator: GrilleGenerator!
     
     @IBAction func stepChanged() {
         let step = Int(stepSlider.value)
-        imageView.image = generator.draw(atStep: step)
+        imageView.image = generator.draw(until: step)
         stepLabel.text = String(step)
     }
 }

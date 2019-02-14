@@ -1,5 +1,5 @@
 //
-//  Configs.swift
+//  GrilleConfig.swift
 //  Grille
 //
 //  Created by Stanislas Chevallier on 14/02/2019.
@@ -8,27 +8,27 @@
 
 import UIKit
 
-struct GridConfig {
+struct GrilleConfig {
     let maxX: Int
     let maxY: Int
     let iterations: Int
     
-    static var `default`: GridConfig {
-        return GridConfig(maxX: 5, maxY: 10, iterations: 1000)
+    static var `default`: GrilleConfig {
+        return GrilleConfig(maxX: 5, maxY: 10, iterations: 1000)
     }
 }
 
-extension GridConfig : Configurable {
+extension GrilleConfig : Configurable {
     var description: String {
         return String(maxX) + "x" + String(maxY) + " (" + String(iterations) + ")"
     }
     
-    static var all: [GridConfig] {
-        return [GridConfig.default]
+    static var all: [GrilleConfig] {
+        return [GrilleConfig.default]
     }
 }
 
-extension GridConfig {
+extension GrilleConfig {
     func startPoints(renderSize: CGSize) -> [CGPoint] {
         let Xs = (0..<maxX)
             .map { i -> CGFloat in CGFloat(i + 1) / CGFloat(maxX + 1) }
