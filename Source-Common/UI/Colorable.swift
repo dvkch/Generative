@@ -47,3 +47,10 @@ extension UIButton : Colorable {
         backgroundColor = colors.linesColor
     }
 }
+
+extension UISwitch : Colorable {
+    func updateAppeareance(with colors: ColorsConfig) {
+        tintColor = colors.linesColor
+    }
+}
+

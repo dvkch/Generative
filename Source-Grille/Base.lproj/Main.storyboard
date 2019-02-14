@@ -36,22 +36,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EaA-dq-pCt">
+                                <rect key="frame" x="306" y="40" width="51" height="31"/>
+                                <connections>
+                                    <action selector="dotsToggleChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="YyX-xQ-4TL"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UC7-np-MNE" firstAttribute="bottom" secondItem="RpW-Xn-bVE" secondAttribute="bottom" constant="20" id="2wU-9W-UEy"/>
                             <constraint firstAttribute="bottom" secondItem="E6i-as-INH" secondAttribute="bottom" id="CYt-wr-cMU"/>
                             <constraint firstItem="XVk-g2-R4I" firstAttribute="centerY" secondItem="RpW-Xn-bVE" secondAttribute="centerY" id="Dxc-Oo-FVk"/>
+                            <constraint firstItem="UC7-np-MNE" firstAttribute="trailing" secondItem="EaA-dq-pCt" secondAttribute="trailing" constant="20" id="KUo-6W-cf0"/>
                             <constraint firstItem="UC7-np-MNE" firstAttribute="trailing" secondItem="XVk-g2-R4I" secondAttribute="trailing" constant="20" id="OZE-3h-uBB"/>
                             <constraint firstItem="E6i-as-INH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Qfc-AS-Oz3"/>
                             <constraint firstItem="XVk-g2-R4I" firstAttribute="leading" secondItem="RpW-Xn-bVE" secondAttribute="trailing" constant="20" id="S18-ez-9Jv"/>
                             <constraint firstItem="E6i-as-INH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SdK-b0-6Jm"/>
+                            <constraint firstItem="EaA-dq-pCt" firstAttribute="top" secondItem="UC7-np-MNE" secondAttribute="top" constant="20" id="fLH-fn-cOe"/>
                             <constraint firstItem="E6i-as-INH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gEG-wu-7yV"/>
                             <constraint firstItem="RpW-Xn-bVE" firstAttribute="leading" secondItem="UC7-np-MNE" secondAttribute="leading" constant="20" id="s35-gZ-anm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UC7-np-MNE"/>
                     </view>
                     <connections>
+                        <outlet property="dotsToggle" destination="EaA-dq-pCt" id="eh2-bz-6AV"/>
                         <outlet property="imageView" destination="E6i-as-INH" id="uUm-N8-eF3"/>
                         <outlet property="stepLabel" destination="XVk-g2-R4I" id="hxp-B2-hZn"/>
                         <outlet property="stepSlider" destination="RpW-Xn-bVE" id="i2x-av-rev"/>

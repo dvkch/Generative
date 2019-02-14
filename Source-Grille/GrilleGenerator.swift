@@ -57,6 +57,30 @@ class GrilleGenerator : AdditiveGenerator {
         steps.append(newPoints)
     }
     
+    func draw(until maxStep: Int, addDots: Bool) -> UIImage? {
+        guard let baseImage = self.draw(until: maxStep) else { return nil }
+        guard addDots else { return baseImage }
+        
+        UIGraphicsBeginImageContextWithOptions(baseImage.size, true, baseImage.scale)
+        defer { UIGraphicsEndImageContext() }
+        
+        baseImage.draw(at: .zero)
+        
+        let stepPoints = steps[min(maxStep, iterations)]
+        
+        for point in stepPoints {
+            let color = point.m > 0 ? UIColor.yellow : .red
+            color.setFill()
+            
+            let path = UIBezierPath()
+            path.move(to: point.cartesianCoordinates)
+            path.addArc(withCenter: point.cartesianCoordinates, radius: (point.m + 1) * 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+            path.fill()
+        }
+        
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    
     override func draw(step: Int, drawRect: CGRect) {
         super.draw(step: step, drawRect: drawRect)
         

@@ -22,20 +22,30 @@ class ViewController: UIViewController {
         stepSlider.maximumValue = Float(generator.grilleConfig.iterations)
         stepChanged()
         
-        generator.colorsConfig.updateAppearance(of: [stepSlider, stepLabel])
+        generator.colorsConfig.updateAppearance(of: [stepSlider, stepLabel, dotsToggle])
     }
 
     // MARK: Views
+    @IBOutlet var dotsToggle: UISwitch!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var stepSlider: UISlider!
     @IBOutlet var stepLabel: UILabel!
 
+    // MARK: Actions
+    @IBAction func dotsToggleChanged() {
+        updateImage()
+    }
+    
+    @IBAction func stepChanged() {
+        updateImage()
+    }
+
     // MARK: Generation
     var generator: GrilleGenerator!
     
-    @IBAction func stepChanged() {
+    func updateImage() {
         let step = Int(stepSlider.value)
-        imageView.image = generator.draw(until: step)
+        imageView.image = generator.draw(until: step, addDots: dotsToggle.isOn)
         stepLabel.text = String(step)
     }
 }
