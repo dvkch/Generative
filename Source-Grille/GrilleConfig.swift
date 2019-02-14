@@ -69,3 +69,80 @@ extension GrilleConfig {
         return indices
     }
 }
+
+extension GrilleConfig {
+    private struct Path {
+        let x: Int
+        let y: Int
+    }
+    
+    private func pathFromIndex(_ index: Int) -> Path {
+        return Path(x: index % maxX, y: index / maxX)
+    }
+    
+    private func indexFromPath(_ path: Path) -> Int {
+        return path.y * maxX + path.x
+    }
+    
+    func indicesNear(index: Int) -> [Int] {
+        let path = pathFromIndex(index)
+        
+        var indices = [Int]()
+        if path.x > 0 {
+            indices.append(indexFromPath(Path(x: path.x - 1, y: path.y)))
+        }
+        
+        if path.y > 0 {
+            indices.append(indexFromPath(Path(x: path.x, y: path.y - 1)))
+        }
+        
+        if path.x < maxX - 1 {
+            indices.append(indexFromPath(Path(x: path.x + 1, y: path.y)))
+        }
+        
+        if path.y < maxY - 1 {
+            indices.append(indexFromPath(Path(x: path.x, y: path.y + 1)))
+        }
+        
+        if path.x > 0 && path.y > 0 {
+            indices.append(indexFromPath(Path(x: path.x - 1, y: path.y - 1)))
+        }
+        
+        if path.x < maxX - 1 && path.y < maxY - 1 {
+            indices.append(indexFromPath(Path(x: path.x + 1, y: path.y + 1)))
+        }
+        
+        if path.x > 0 && path.y < maxY - 1 {
+            indices.append(indexFromPath(Path(x: path.x - 1, y: path.y + 1)))
+        }
+        
+        if path.x < maxX - 1 && path.y > 0 {
+            indices.append(indexFromPath(Path(x: path.x + 1, y: path.y - 1)))
+        }
+        
+        return indices
+    }
+}
+
+extension GrilleConfig {
+    static func testNearbyPoints() {
+        let config = GrilleConfig(maxX: 3, maxY: 3, iterations: 0)
+        /*
+         *  0  1  2
+         *  3  4  5
+         *  6  7  8
+         */
+        
+        assert(config.indicesNear(index: 0).sorted() == [1, 3, 4].sorted())
+        assert(config.indicesNear(index: 1).sorted() == [0, 2, 3, 4, 5].sorted())
+        assert(config.indicesNear(index: 2).sorted() == [1, 4, 5].sorted())
+        assert(config.indicesNear(index: 3).sorted() == [0, 1, 4, 7, 6].sorted())
+        assert(config.indicesNear(index: 4).sorted() == [0, 1, 2, 3, 5, 6, 7, 8].sorted())
+        assert(config.indicesNear(index: 5).sorted() == [2, 1, 4, 7, 8].sorted())
+        assert(config.indicesNear(index: 6).sorted() == [3, 4, 7].sorted())
+        assert(config.indicesNear(index: 7).sorted() == [6, 3, 4, 5, 8].sorted())
+        assert(config.indicesNear(index: 8).sorted() == [5, 4, 7].sorted())
+        
+        print("All good")
+    }
+}
