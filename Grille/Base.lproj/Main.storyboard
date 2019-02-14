@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Grille" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E6i-as-INH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RpW-Xn-bVE">
+                                <rect key="frame" x="18" y="617" width="269" height="31"/>
+                                <connections>
+                                    <action selector="stepChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="YHa-oO-d2R"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-g2-R4I">
+                                <rect key="frame" x="305" y="621.5" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="I5f-CN-3OY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UC7-np-MNE" firstAttribute="bottom" secondItem="RpW-Xn-bVE" secondAttribute="bottom" constant="20" id="2wU-9W-UEy"/>
+                            <constraint firstAttribute="bottom" secondItem="E6i-as-INH" secondAttribute="bottom" id="CYt-wr-cMU"/>
+                            <constraint firstItem="XVk-g2-R4I" firstAttribute="centerY" secondItem="RpW-Xn-bVE" secondAttribute="centerY" id="Dxc-Oo-FVk"/>
+                            <constraint firstItem="UC7-np-MNE" firstAttribute="trailing" secondItem="XVk-g2-R4I" secondAttribute="trailing" constant="20" id="OZE-3h-uBB"/>
+                            <constraint firstItem="E6i-as-INH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Qfc-AS-Oz3"/>
+                            <constraint firstItem="XVk-g2-R4I" firstAttribute="leading" secondItem="RpW-Xn-bVE" secondAttribute="trailing" constant="20" id="S18-ez-9Jv"/>
+                            <constraint firstItem="E6i-as-INH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SdK-b0-6Jm"/>
+                            <constraint firstItem="E6i-as-INH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gEG-wu-7yV"/>
+                            <constraint firstItem="RpW-Xn-bVE" firstAttribute="leading" secondItem="UC7-np-MNE" secondAttribute="leading" constant="20" id="s35-gZ-anm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UC7-np-MNE"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="E6i-as-INH" id="uUm-N8-eF3"/>
+                        <outlet property="stepLabel" destination="XVk-g2-R4I" id="hxp-B2-hZn"/>
+                        <outlet property="stepSlider" destination="RpW-Xn-bVE" id="i2x-av-rev"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

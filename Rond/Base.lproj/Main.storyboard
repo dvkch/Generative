@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rond" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vgr-tI-WTh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YW0-cg-hbq">
+                                <rect key="frame" x="305" y="629" width="50" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="lXl-bt-nCy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8mF-wq-lq8">
+                                <rect key="frame" x="68" y="623" width="219" height="31"/>
+                                <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="maximumTrackTintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="stepSliderChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="1Sx-UE-1VN"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="24q-W6-Q7C">
+                                <rect key="frame" x="20" y="88" width="335" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="colorsChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="rDb-kO-Xl0"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-zh-6dz">
+                                <rect key="frame" x="20" y="623" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="HQ"/>
+                                <connections>
+                                    <action selector="hqButtonTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="7On-9z-CCq"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sqX-pa-dAB">
+                                <rect key="frame" x="20" y="40" width="335" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="configChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="bhc-k6-0au"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8mF-wq-lq8" firstAttribute="leading" secondItem="Ogc-zh-6dz" secondAttribute="trailing" constant="20" id="2G3-BA-VC6"/>
+                            <constraint firstItem="sqX-pa-dAB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2ni-wc-8Mf"/>
+                            <constraint firstItem="Vgr-tI-WTh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AYl-Db-O3f"/>
+                            <constraint firstAttribute="trailing" secondItem="Vgr-tI-WTh" secondAttribute="trailing" id="DzU-QL-tSX"/>
+                            <constraint firstItem="8mF-wq-lq8" firstAttribute="centerY" secondItem="YW0-cg-hbq" secondAttribute="centerY" id="GnY-oG-GQ5"/>
+                            <constraint firstItem="sqX-pa-dAB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IDs-41-Who"/>
+                            <constraint firstItem="Vgr-tI-WTh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="L8G-F4-C99"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sqX-pa-dAB" secondAttribute="trailing" constant="20" id="LD2-82-gFp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="24q-W6-Q7C" secondAttribute="trailing" constant="20" id="XGR-se-Dex"/>
+                            <constraint firstItem="24q-W6-Q7C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zok-5v-JR2"/>
+                            <constraint firstItem="24q-W6-Q7C" firstAttribute="top" secondItem="sqX-pa-dAB" secondAttribute="bottom" constant="20" id="bOA-rd-nwC"/>
+                            <constraint firstAttribute="bottom" secondItem="Vgr-tI-WTh" secondAttribute="bottom" id="bas-OB-kJ5"/>
+                            <constraint firstItem="Ogc-zh-6dz" firstAttribute="centerY" secondItem="8mF-wq-lq8" secondAttribute="centerY" id="hS5-ii-Lw2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YW0-cg-hbq" secondAttribute="bottom" constant="20" id="mxU-IM-J0r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YW0-cg-hbq" secondAttribute="trailing" constant="20" id="sO7-hg-Aad"/>
+                            <constraint firstItem="Ogc-zh-6dz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uoe-PO-hjt"/>
+                            <constraint firstItem="YW0-cg-hbq" firstAttribute="leading" secondItem="8mF-wq-lq8" secondAttribute="trailing" constant="20" id="xMV-Ur-tVU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="hqButton" destination="Ogc-zh-6dz" id="Wnc-Vb-V3V"/>
+                        <outlet property="imageView" destination="Vgr-tI-WTh" id="46A-tq-cCh"/>
+                        <outlet property="segmentsColors" destination="24q-W6-Q7C" id="vqc-sp-5Gt"/>
+                        <outlet property="segmentsConfigs" destination="sqX-pa-dAB" id="kdw-Mc-OHT"/>
+                        <outlet property="stepLabel" destination="YW0-cg-hbq" id="siR-9q-RZf"/>
+                        <outlet property="stepSlider" destination="8mF-wq-lq8" id="nMh-ah-Fmm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>

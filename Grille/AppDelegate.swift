@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Generative
+//  Grille
 //
 //  Created by Stanislas Chevallier on 14/02/2019.
 //  Copyright © 2019 Syan.me. All rights reserved.
