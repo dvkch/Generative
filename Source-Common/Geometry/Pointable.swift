@@ -19,3 +19,11 @@ extension Array where Element : Pointable {
     }
 }
 
+extension Pointable {
+    func vector(to point: Pointable) -> CGVector {
+        return CGVector(
+            dx: point.cartesianCoordinates.x - cartesianCoordinates.x,
+            dy: point.cartesianCoordinates.y - cartesianCoordinates.y
+        )
+    }
+}

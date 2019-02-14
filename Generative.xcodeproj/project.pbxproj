@@ -22,6 +22,10 @@
 		972314ED2215A134008F4C5F /* UISegmentedControl+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314EB2215A134008F4C5F /* UISegmentedControl+SY.swift */; };
 		972314EF2215A29D008F4C5F /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314EE2215A29D008F4C5F /* Colorable.swift */; };
 		972314F02215A29D008F4C5F /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314EE2215A29D008F4C5F /* Colorable.swift */; };
+		972314F22215A6E9008F4C5F /* MassPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314F12215A6E9008F4C5F /* MassPoint.swift */; };
+		972314F32215A6E9008F4C5F /* MassPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314F12215A6E9008F4C5F /* MassPoint.swift */; };
+		972314F82215AA95008F4C5F /* CGVector+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314F72215AA95008F4C5F /* CGVector+SY.swift */; };
+		972314F92215AA95008F4C5F /* CGVector+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314F72215AA95008F4C5F /* CGVector+SY.swift */; };
 		97262C73221563060004697D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C72221563060004697D /* AppDelegate.swift */; };
 		97262C75221563060004697D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C74221563060004697D /* ViewController.swift */; };
 		97262C78221563060004697D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97262C76221563060004697D /* Main.storyboard */; };
@@ -62,6 +66,8 @@
 		972314E722159FDC008F4C5F /* PolarPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarPoint.swift; sourceTree = "<group>"; };
 		972314EB2215A134008F4C5F /* UISegmentedControl+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+SY.swift"; sourceTree = "<group>"; };
 		972314EE2215A29D008F4C5F /* Colorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorable.swift; sourceTree = "<group>"; };
+		972314F12215A6E9008F4C5F /* MassPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassPoint.swift; sourceTree = "<group>"; };
+		972314F72215AA95008F4C5F /* CGVector+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+SY.swift"; sourceTree = "<group>"; };
 		97262C67221562F50004697D /* Benchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
 		97262C68221562F50004697D /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
 		97262C69221562F50004697D /* CGPoint+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+SY.swift"; sourceTree = "<group>"; };
@@ -146,9 +152,11 @@
 			isa = PBXGroup;
 			children = (
 				97262C69221562F50004697D /* CGPoint+SY.swift */,
+				972314F12215A6E9008F4C5F /* MassPoint.swift */,
 				972314E422159F76008F4C5F /* Pointable.swift */,
 				972314E722159FDC008F4C5F /* PolarPoint.swift */,
 				97262C6A221562F50004697D /* UIBezierPath+SY.swift */,
+				972314F72215AA95008F4C5F /* CGVector+SY.swift */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -482,6 +490,7 @@
 				97CC05BB2215644A00780F94 /* Benchmark.swift in Sources */,
 				972314EF2215A29D008F4C5F /* Colorable.swift in Sources */,
 				97262C75221563060004697D /* ViewController.swift in Sources */,
+				972314F82215AA95008F4C5F /* CGVector+SY.swift in Sources */,
 				97CC05BC2215644A00780F94 /* Maths.swift in Sources */,
 				97CC05BD2215644A00780F94 /* CGPoint+SY.swift in Sources */,
 				972314E522159F76008F4C5F /* Pointable.swift in Sources */,
@@ -493,6 +502,7 @@
 				972314DD22156DEE008F4C5F /* ColorsConfig.swift in Sources */,
 				97CC05BE2215644A00780F94 /* UIBezierPath+SY.swift in Sources */,
 				97CC05BF2215644A00780F94 /* UIColor+SY.swift in Sources */,
+				972314F22215A6E9008F4C5F /* MassPoint.swift in Sources */,
 				97CC05CA2215650700780F94 /* RondConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +516,7 @@
 				97262C8B2215631A0004697D /* ViewController.swift in Sources */,
 				972314F02215A29D008F4C5F /* Colorable.swift in Sources */,
 				97CC05C12215644B00780F94 /* Maths.swift in Sources */,
+				972314F92215AA95008F4C5F /* CGVector+SY.swift in Sources */,
 				97CC05C22215644B00780F94 /* CGPoint+SY.swift in Sources */,
 				97CC05CF221566BE00780F94 /* GrilleConfig.swift in Sources */,
 				972314E622159F76008F4C5F /* Pointable.swift in Sources */,
@@ -517,6 +528,7 @@
 				972314DE22156DEE008F4C5F /* ColorsConfig.swift in Sources */,
 				97CC05CD2215651800780F94 /* Configurable.swift in Sources */,
 				97CC05C32215644B00780F94 /* UIBezierPath+SY.swift in Sources */,
+				972314F32215A6E9008F4C5F /* MassPoint.swift in Sources */,
 				97CC05C42215644B00780F94 /* UIColor+SY.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
