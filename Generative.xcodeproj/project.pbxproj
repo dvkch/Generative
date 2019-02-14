@@ -14,6 +14,14 @@
 		972314DE22156DEE008F4C5F /* ColorsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314DC22156DEE008F4C5F /* ColorsConfig.swift */; };
 		972314E122156E89008F4C5F /* RenderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E022156E89008F4C5F /* RenderConfig.swift */; };
 		972314E222156E89008F4C5F /* RenderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E022156E89008F4C5F /* RenderConfig.swift */; };
+		972314E522159F76008F4C5F /* Pointable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E422159F76008F4C5F /* Pointable.swift */; };
+		972314E622159F76008F4C5F /* Pointable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E422159F76008F4C5F /* Pointable.swift */; };
+		972314E822159FDC008F4C5F /* PolarPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E722159FDC008F4C5F /* PolarPoint.swift */; };
+		972314E922159FDC008F4C5F /* PolarPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E722159FDC008F4C5F /* PolarPoint.swift */; };
+		972314EC2215A134008F4C5F /* UISegmentedControl+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314EB2215A134008F4C5F /* UISegmentedControl+SY.swift */; };
+		972314ED2215A134008F4C5F /* UISegmentedControl+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314EB2215A134008F4C5F /* UISegmentedControl+SY.swift */; };
+		972314EF2215A29D008F4C5F /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314EE2215A29D008F4C5F /* Colorable.swift */; };
+		972314F02215A29D008F4C5F /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314EE2215A29D008F4C5F /* Colorable.swift */; };
 		97262C73221563060004697D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C72221563060004697D /* AppDelegate.swift */; };
 		97262C75221563060004697D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C74221563060004697D /* ViewController.swift */; };
 		97262C78221563060004697D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97262C76221563060004697D /* Main.storyboard */; };
@@ -28,12 +36,12 @@
 		97CC05BA2215644700780F94 /* RondGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05B92215644700780F94 /* RondGenerator.swift */; };
 		97CC05BB2215644A00780F94 /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C67221562F50004697D /* Benchmark.swift */; };
 		97CC05BC2215644A00780F94 /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C68221562F50004697D /* Maths.swift */; };
-		97CC05BD2215644A00780F94 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C69221562F50004697D /* Points.swift */; };
+		97CC05BD2215644A00780F94 /* CGPoint+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C69221562F50004697D /* CGPoint+SY.swift */; };
 		97CC05BE2215644A00780F94 /* UIBezierPath+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C6A221562F50004697D /* UIBezierPath+SY.swift */; };
 		97CC05BF2215644A00780F94 /* UIColor+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C6B221562F50004697D /* UIColor+SY.swift */; };
 		97CC05C02215644B00780F94 /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C67221562F50004697D /* Benchmark.swift */; };
 		97CC05C12215644B00780F94 /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C68221562F50004697D /* Maths.swift */; };
-		97CC05C22215644B00780F94 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C69221562F50004697D /* Points.swift */; };
+		97CC05C22215644B00780F94 /* CGPoint+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C69221562F50004697D /* CGPoint+SY.swift */; };
 		97CC05C32215644B00780F94 /* UIBezierPath+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C6A221562F50004697D /* UIBezierPath+SY.swift */; };
 		97CC05C42215644B00780F94 /* UIColor+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C6B221562F50004697D /* UIColor+SY.swift */; };
 		97CC05CA2215650700780F94 /* RondConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05C92215650700780F94 /* RondConfig.swift */; };
@@ -50,9 +58,13 @@
 		972314D922156DA9008F4C5F /* AdditiveGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditiveGenerator.swift; sourceTree = "<group>"; };
 		972314DC22156DEE008F4C5F /* ColorsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsConfig.swift; sourceTree = "<group>"; };
 		972314E022156E89008F4C5F /* RenderConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderConfig.swift; sourceTree = "<group>"; };
+		972314E422159F76008F4C5F /* Pointable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pointable.swift; sourceTree = "<group>"; };
+		972314E722159FDC008F4C5F /* PolarPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarPoint.swift; sourceTree = "<group>"; };
+		972314EB2215A134008F4C5F /* UISegmentedControl+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+SY.swift"; sourceTree = "<group>"; };
+		972314EE2215A29D008F4C5F /* Colorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorable.swift; sourceTree = "<group>"; };
 		97262C67221562F50004697D /* Benchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
 		97262C68221562F50004697D /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
-		97262C69221562F50004697D /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
+		97262C69221562F50004697D /* CGPoint+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+SY.swift"; sourceTree = "<group>"; };
 		97262C6A221562F50004697D /* UIBezierPath+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+SY.swift"; sourceTree = "<group>"; };
 		97262C6B221562F50004697D /* UIColor+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SY.swift"; sourceTree = "<group>"; };
 		97262C70221563060004697D /* Rond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rond.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +142,27 @@
 			path = Generator;
 			sourceTree = "<group>";
 		};
+		972314E322159F50008F4C5F /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				97262C69221562F50004697D /* CGPoint+SY.swift */,
+				972314E422159F76008F4C5F /* Pointable.swift */,
+				972314E722159FDC008F4C5F /* PolarPoint.swift */,
+				97262C6A221562F50004697D /* UIBezierPath+SY.swift */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		972314EA2215A112008F4C5F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				97262C6B221562F50004697D /* UIColor+SY.swift */,
+				972314EB2215A134008F4C5F /* UISegmentedControl+SY.swift */,
+				972314EE2215A29D008F4C5F /* Colorable.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		97262C48221562A90004697D = {
 			isa = PBXGroup;
 			children = (
@@ -154,12 +187,11 @@
 		97262C66221562F50004697D /* Source-Common */ = {
 			isa = PBXGroup;
 			children = (
-				972314DF22156DF5008F4C5F /* Generator */,
 				97262C67221562F50004697D /* Benchmark.swift */,
+				972314DF22156DF5008F4C5F /* Generator */,
+				972314E322159F50008F4C5F /* Geometry */,
 				97262C68221562F50004697D /* Maths.swift */,
-				97262C69221562F50004697D /* Points.swift */,
-				97262C6A221562F50004697D /* UIBezierPath+SY.swift */,
-				97262C6B221562F50004697D /* UIColor+SY.swift */,
+				972314EA2215A112008F4C5F /* UI */,
 			);
 			path = "Source-Common";
 			sourceTree = "<group>";
@@ -448,11 +480,15 @@
 				97CC05CC2215651800780F94 /* Configurable.swift in Sources */,
 				97CC05BA2215644700780F94 /* RondGenerator.swift in Sources */,
 				97CC05BB2215644A00780F94 /* Benchmark.swift in Sources */,
+				972314EF2215A29D008F4C5F /* Colorable.swift in Sources */,
 				97262C75221563060004697D /* ViewController.swift in Sources */,
 				97CC05BC2215644A00780F94 /* Maths.swift in Sources */,
-				97CC05BD2215644A00780F94 /* Points.swift in Sources */,
+				97CC05BD2215644A00780F94 /* CGPoint+SY.swift in Sources */,
+				972314E522159F76008F4C5F /* Pointable.swift in Sources */,
 				972314E122156E89008F4C5F /* RenderConfig.swift in Sources */,
+				972314EC2215A134008F4C5F /* UISegmentedControl+SY.swift in Sources */,
 				972314DA22156DA9008F4C5F /* AdditiveGenerator.swift in Sources */,
+				972314E822159FDC008F4C5F /* PolarPoint.swift in Sources */,
 				97262C73221563060004697D /* AppDelegate.swift in Sources */,
 				972314DD22156DEE008F4C5F /* ColorsConfig.swift in Sources */,
 				97CC05BE2215644A00780F94 /* UIBezierPath+SY.swift in Sources */,
@@ -468,11 +504,15 @@
 				97CC05B82215644000780F94 /* GrilleGenerator.swift in Sources */,
 				97CC05C02215644B00780F94 /* Benchmark.swift in Sources */,
 				97262C8B2215631A0004697D /* ViewController.swift in Sources */,
+				972314F02215A29D008F4C5F /* Colorable.swift in Sources */,
 				97CC05C12215644B00780F94 /* Maths.swift in Sources */,
-				97CC05C22215644B00780F94 /* Points.swift in Sources */,
+				97CC05C22215644B00780F94 /* CGPoint+SY.swift in Sources */,
 				97CC05CF221566BE00780F94 /* GrilleConfig.swift in Sources */,
+				972314E622159F76008F4C5F /* Pointable.swift in Sources */,
 				972314E222156E89008F4C5F /* RenderConfig.swift in Sources */,
+				972314ED2215A134008F4C5F /* UISegmentedControl+SY.swift in Sources */,
 				972314DB22156DA9008F4C5F /* AdditiveGenerator.swift in Sources */,
+				972314E922159FDC008F4C5F /* PolarPoint.swift in Sources */,
 				97262C892215631A0004697D /* AppDelegate.swift in Sources */,
 				972314DE22156DEE008F4C5F /* ColorsConfig.swift in Sources */,
 				97CC05CD2215651800780F94 /* Configurable.swift in Sources */,

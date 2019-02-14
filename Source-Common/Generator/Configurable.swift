@@ -13,12 +13,3 @@ protocol Configurable {
     static var all: [Self] { get }
 }
 
-extension UISegmentedControl {
-    func updateWithConfigurable<T: Configurable>(configurable: T.Type) {
-        removeAllSegments()
-        T.all.forEach { (config) in
-            insertSegment(withTitle: config.description, at: numberOfSegments, animated: false)
-        }
-        selectedSegmentIndex = 0
-    }
-}

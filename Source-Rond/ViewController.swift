@@ -16,10 +16,6 @@ class ViewController: UIViewController {
         segmentsConfigs.updateWithConfigurable(configurable: RondConfig.self)
         segmentsColors.updateWithConfigurable(configurable: ColorsConfig.self)
 
-        stepSlider.maximumTrackTintColor = .gray
-        hqButton.layer.cornerRadius = 5
-        hqButton.layer.masksToBounds = true
-        
         updateGenerators()
     }
 
@@ -47,12 +43,7 @@ class ViewController: UIViewController {
         let colors = ColorsConfig.all[self.segmentsColors.selectedSegmentIndex]
         
         view.backgroundColor = colors.backgroundColor
-        segmentsConfigs.tintColor = colors.linesColor
-        segmentsColors.tintColor = colors.linesColor
-        stepSlider.minimumTrackTintColor = colors.linesColor
-        stepLabel.textColor = colors.linesColor
-        hqButton.setTitleColor(colors.backgroundColor, for: .normal)
-        hqButton.backgroundColor = colors.linesColor
+        colors.updateAppearance(of: [segmentsConfigs, segmentsColors, stepSlider, stepLabel, hqButton])
 
         SVProgressHUD.show()
         

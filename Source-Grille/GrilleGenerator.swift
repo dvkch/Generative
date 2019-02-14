@@ -33,8 +33,10 @@ class GrilleGenerator : AdditiveGenerator {
     override func iterate() {
         var newPoints = steps.last!
         
+        let dimension = min(renderSize.width / CGFloat(grilleConfig.maxX), renderSize.height / CGFloat(grilleConfig.maxY))
+        
         for i in 0..<newPoints.count {
-            newPoints[i].randomWalk()
+            newPoints[i].moveRandom(startRadius: dimension, amplification: 0.5)
         }
         
         steps.append(newPoints)

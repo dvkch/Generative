@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         stepSlider.minimumValue = 0
         stepSlider.maximumValue = Float(generator.grilleConfig.iterations)
         stepChanged()
+        
+        generator.colorsConfig.updateAppearance(of: [stepSlider, stepLabel])
     }
 
     // MARK: Views

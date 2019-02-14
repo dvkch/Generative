@@ -10,7 +10,7 @@ import UIKit
 
 class RondGenerator : AdditiveGenerator {
     typealias Circles = [Circle]
-    typealias Circle = [Movable]
+    typealias Circle = [Pointable]
     
     let rondConfig: RondConfig
     var points = [Circles]()
@@ -65,7 +65,7 @@ class RondGenerator : AdditiveGenerator {
         let path = UIBezierPath()
         path.lineWidth = renderConfig.lineWidth
         for circle in points[step] {
-            path.interpolatePointsWithHermite(interpolationPoints: circle.map { $0.cartesianPoint })
+            path.interpolatePointsWithHermite(interpolationPoints: circle.map { $0.cartesianCoordinates })
         }
         path.apply(CGAffineTransform(translationX: drawRect.midX, y: drawRect.midY))
         path.stroke(with: CGBlendMode.normal, alpha: 0.02)
