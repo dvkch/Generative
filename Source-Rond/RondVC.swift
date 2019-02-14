@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RondVC.swift
 //  Rond
 //
 //  Created by Stanislas Chevallier on 09/02/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-class ViewController: UIViewController {
+class RondVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

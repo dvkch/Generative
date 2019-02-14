@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GrilleVC.swift
 //  Grille
 //
 //  Created by Stanislas Chevallier on 10/02/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GrilleVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
