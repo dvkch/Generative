@@ -113,9 +113,9 @@
 		97262C48221562A90004697D = {
 			isa = PBXGroup;
 			children = (
-				97262C66221562F50004697D /* Common */,
-				97262C71221563060004697D /* Rond */,
-				97262C872215631A0004697D /* Grille */,
+				97262C66221562F50004697D /* Source-Common */,
+				97262C71221563060004697D /* Source-Rond */,
+				97262C872215631A0004697D /* Source-Grille */,
 				97262C52221562A90004697D /* Products */,
 				04866587EB30923BCF0A7BBA /* Pods */,
 				41130F71654CB1DD5C8396CC /* Frameworks */,
@@ -131,7 +131,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		97262C66221562F50004697D /* Common */ = {
+		97262C66221562F50004697D /* Source-Common */ = {
 			isa = PBXGroup;
 			children = (
 				97262C67221562F50004697D /* Benchmark.swift */,
@@ -141,10 +141,10 @@
 				97262C6A221562F50004697D /* UIBezierPath+SY.swift */,
 				97262C6B221562F50004697D /* UIColor+SY.swift */,
 			);
-			path = Common;
+			path = "Source-Common";
 			sourceTree = "<group>";
 		};
-		97262C71221563060004697D /* Rond */ = {
+		97262C71221563060004697D /* Source-Rond */ = {
 			isa = PBXGroup;
 			children = (
 				97CC05C92215650700780F94 /* Configs.swift */,
@@ -153,10 +153,10 @@
 				97262C76221563060004697D /* Main.storyboard */,
 				97CC05C7221564DF00780F94 /* Misc */,
 			);
-			path = Rond;
+			path = "Source-Rond";
 			sourceTree = "<group>";
 		};
-		97262C872215631A0004697D /* Grille */ = {
+		97262C872215631A0004697D /* Source-Grille */ = {
 			isa = PBXGroup;
 			children = (
 				97CC05CE221566BE00780F94 /* Configs.swift */,
@@ -165,7 +165,7 @@
 				97262C8C2215631A0004697D /* Main.storyboard */,
 				97CC05C8221564ED00780F94 /* Misc */,
 			);
-			path = Grille;
+			path = "Source-Grille";
 			sourceTree = "<group>";
 		};
 		97CC05C7221564DF00780F94 /* Misc */ = {
@@ -616,7 +616,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79RY8264V4;
-				INFOPLIST_FILE = Rond/Info.plist;
+				INFOPLIST_FILE = "Source-Rond/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,7 +635,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79RY8264V4;
-				INFOPLIST_FILE = Rond/Info.plist;
+				INFOPLIST_FILE = "Source-Rond/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,7 +654,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79RY8264V4;
-				INFOPLIST_FILE = Grille/Info.plist;
+				INFOPLIST_FILE = "Source-Grille/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -673,7 +673,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79RY8264V4;
-				INFOPLIST_FILE = Grille/Info.plist;
+				INFOPLIST_FILE = "Source-Grille/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
