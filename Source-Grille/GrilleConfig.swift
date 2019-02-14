@@ -8,35 +8,75 @@
 
 import UIKit
 
-struct GrilleConfig {
-    let maxX: Int
-    let maxY: Int
-    let iterations: Int
+enum GrilleConfig {
+    case squarre(count: Int)
+    case rectangle(maxX: Int, maxY: Int)
+}
+
+extension GrilleConfig {
+    var maxX: Int {
+        switch self {
+        case .squarre(let count):  return count
+        case .rectangle(let x, _): return x
+        }
+    }
     
-    static var `default`: GrilleConfig {
-        return GrilleConfig(maxX: 5, maxY: 10, iterations: 1000)
+    var maxY: Int {
+        switch self {
+        case .squarre(let count):  return count
+        case .rectangle(_, let y): return y
+        }
+    }
+    
+    var iterations: Int {
+        return 3000
     }
 }
 
 extension GrilleConfig : Configurable {
     var description: String {
-        return String(maxX) + "x" + String(maxY) + " (" + String(iterations) + ")"
+        switch self {
+        case .squarre(let count):  return "Squarre \(count) (\(iterations))"
+        case .rectangle(let x, let y):  return "Rectangle \(x)x\(y) (\(iterations))"
+        }
     }
     
     static var all: [GrilleConfig] {
-        return [GrilleConfig.default]
+        return [
+            GrilleConfig.squarre(count: 12),
+            GrilleConfig.rectangle(maxX: 5, maxY: 7)
+        ]
     }
 }
 
 extension GrilleConfig {
     func startPoints(renderSize: CGSize) -> [CGPoint] {
+        let xOffset: CGFloat
+        let yOffset: CGFloat
+        let xSpan: CGFloat
+        let ySpan: CGFloat
+        
+        switch self {
+        case .squarre:
+            xOffset = renderSize.min * 0.1 + (renderSize.width  - renderSize.min) / 2
+            yOffset = renderSize.min * 0.1 + (renderSize.height - renderSize.min) / 2
+            xSpan = renderSize.min * 0.8
+            ySpan = renderSize.min * 0.8
+        case .rectangle:
+            xOffset = renderSize.width  * 0.1
+            xSpan   = renderSize.width  * 0.8
+            yOffset = renderSize.height * 0.1
+            ySpan   = renderSize.height * 0.8
+        }
+        
+        
         let Xs = (0..<maxX)
             .map { i -> CGFloat in CGFloat(i + 1) / CGFloat(maxX + 1) }
-            .map { p -> CGFloat in renderSize.width * (0.1 + p * 0.8) }
+            .map { p -> CGFloat in xOffset + xSpan * p }
         
         let Ys = (0..<maxY)
             .map { i -> CGFloat in CGFloat(i + 1) / CGFloat(maxY + 1) }
-            .map { p -> CGFloat in renderSize.height * (0.1 + p * 0.8) }
+            .map { p -> CGFloat in yOffset + ySpan * p }
         
         return Ys.map { y -> [CGPoint] in
             Xs.map { x -> CGPoint in
@@ -126,7 +166,7 @@ extension GrilleConfig {
 
 extension GrilleConfig {
     static func testNearbyPoints() {
-        let config = GrilleConfig(maxX: 3, maxY: 3, iterations: 0)
+        let config = GrilleConfig.squarre(count: 3)
         /*
          *  0  1  2
          *  3  4  5

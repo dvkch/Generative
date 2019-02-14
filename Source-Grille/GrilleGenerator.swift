@@ -21,7 +21,6 @@ class GrilleGenerator : AdditiveGenerator {
         super.init(renderSize: renderSize, renderConfig: renderConfig, colorsConfig: colorsConfig)
         
         let masses = [CGFloat(1), 2, -1, -2]
-        // Maths.random(max: 4, steps: 20, center: true)
         
         let firstPoints = grilleConfig
             .startPoints(renderSize: renderSize)
@@ -41,17 +40,14 @@ class GrilleGenerator : AdditiveGenerator {
         let prevPoints = steps.last!
         var newPoints = prevPoints
         
-        let dimension = min(
-            renderSize.width  / CGFloat(grilleConfig.maxX),
-            renderSize.height / CGFloat(grilleConfig.maxY)
-        )
+        let dimension = renderSize.min / 5
         
         for i in 0..<newPoints.count {
             let nearby = grilleConfig
                 .indicesNear(index: i)
                 .map { prevPoints[$0] }
             
-            newPoints[i].moveRandom(startRadius: dimension, amplification: 0.5, nearbyPoints: nearby)
+            newPoints[i].moveRandom(startRadius: dimension, amplification: 0.1, nearbyPoints: nearby)
         }
         
         steps.append(newPoints)
@@ -68,14 +64,31 @@ class GrilleGenerator : AdditiveGenerator {
         
         let stepPoints = steps[min(maxStep, iterations)]
         
-        for point in stepPoints {
-            let color = point.m > 0 ? UIColor.yellow : .red
-            color.setFill()
+        for (i, point) in stepPoints.enumerated() {
+            let closed = point.m > 0
+
+            let arc = UIBezierPath()
+            arc.lineWidth = 2
+            arc.addArc(withCenter: point.cartesianCoordinates, radius: (abs(point.m) + 1) * 3, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+            if closed {
+                colorsConfig.linesColor.setFill()
+                arc.fill()
+            } else {
+                colorsConfig.linesColor.setStroke()
+                arc.stroke()
+            }
             
-            let path = UIBezierPath()
-            path.move(to: point.cartesianCoordinates)
-            path.addArc(withCenter: point.cartesianCoordinates, radius: (point.m + 1) * 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
-            path.fill()
+            let nearby = grilleConfig
+                .indicesNear(index: i)
+                .map { stepPoints[$0] }
+            let v = point.vectorToCentroid(of: nearby, applyDirection: true)
+            
+            let vector = UIBezierPath()
+            vector.move(to: point.cartesianCoordinates)
+            vector.addLine(to: CGPoint(x: point.x + v.dx, y: point.y + v.dy))
+            vector.lineWidth = 2
+            UIColor(red: 0, green: 0.5, blue: 1, alpha: 1).setStroke()
+            vector.stroke()
         }
         
         return UIGraphicsGetImageFromCurrentImageContext()

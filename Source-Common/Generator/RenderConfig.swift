@@ -15,7 +15,7 @@ struct RenderConfig {
     let drawEveryNStep: Int
     
     static var defaultGrille: RenderConfig {
-        return RenderConfig(lineWidth: 0.5, lineAlpha: 0.05, scale: 2, drawEveryNStep: 1)
+        return RenderConfig(lineWidth: 0.5, lineAlpha: 0.02, scale: 2, drawEveryNStep: 1)
     }
     
     static var defaultRond: RenderConfig {

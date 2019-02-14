@@ -11,37 +11,43 @@ import UIKit
 struct MassPoint {
     var x: CGFloat
     var y: CGFloat
-    let m: CGFloat
+    let m: CGFloat // m is positive for a closed node (moving towards the centroid of nearby points), negative for an open node (moving away)
+}
+
+extension Array where Element == MassPoint {
+    var centroid: CGPoint {
+        let meanMass = map({ abs($0.m) }).reduce(0, +)
+        
+        let center = self
+            .map { $0.cartesianCoordinates * abs($0.m) / meanMass }
+            .reduce(.zero, +)
+        
+        return center
+    }
 }
 
 extension MassPoint {
-    func meanVector(to nearbyPoints: [MassPoint]) -> CGVector {
-        let meanMass = nearbyPoints.map({ $0.m }).reduce(0, +)
-        if meanMass == 0 {
-            return CGVector(dx: 0, dy: 0)
-        }
+    func vectorToCentroid(of points: [MassPoint], applyDirection: Bool) -> CGVector {
+        let centroid = points.centroid
+        let vector = CGVector(dx: centroid.x - x, dy: centroid.y - y)
         
-        let vectors = nearbyPoints.map { (point) -> CGVector in
-            self.vector(to: point) * point.m
+        if applyDirection {
+            // 1 if positive, -1 if negative
+            return vector * m / abs(m)
         }
-        
-        // TODO: really need to divide by mean mass?
-        return vectors.reduce(CGVector.zero, +) / meanMass
+        return vector
     }
 }
 
 extension MassPoint {
     mutating func moveRandom(startRadius: CGFloat, amplification: CGFloat, nearbyPoints: [MassPoint]) {
-        let meanVector = self.meanVector(to: nearbyPoints)
+        let meanVector = vectorToCentroid(of: nearbyPoints, applyDirection: true)
         
-        let coeffX = Maths.random(max: startRadius / 5_000, steps: 100, center: true) * amplification
-        let coeffY = Maths.random(max: startRadius / 5_000, steps: 100, center: true) * amplification
+        let coeffX  = Maths.random(max: startRadius / 5_000, steps: 100, center: true) * amplification
+        let coeffY  = Maths.random(max: startRadius / 5_000, steps: 100, center: true) * amplification
         
-        x *= (1 + coeffX)
-        y *= (1 + coeffY)
-        
-        x += meanVector.dx / 500
-        y += meanVector.dy / 500
+        x = x * (1 + coeffX) + meanVector.dx / 200 * amplification
+        y = y * (1 + coeffY) + meanVector.dy / 200 * amplification
     }
 }
 
