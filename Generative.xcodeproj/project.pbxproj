@@ -52,6 +52,31 @@
 		97CC05CC2215651800780F94 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05CB2215651800780F94 /* Configurable.swift */; };
 		97CC05CD2215651800780F94 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05CB2215651800780F94 /* Configurable.swift */; };
 		97CC05CF221566BE00780F94 /* GrilleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05CE221566BE00780F94 /* GrilleConfig.swift */; };
+		97EAC38522FAA3690077509D /* SteppingGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAC38422FAA3690077509D /* SteppingGenerator.swift */; };
+		97EAC38D22FAA4670077509D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAC38C22FAA4670077509D /* AppDelegate.swift */; };
+		97EAC38F22FAA4670077509D /* CircuitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAC38E22FAA4670077509D /* CircuitVC.swift */; };
+		97EAC39222FAA4670077509D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97EAC39022FAA4670077509D /* Main.storyboard */; };
+		97EAC39422FAA4680077509D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97EAC39322FAA4680077509D /* Assets.xcassets */; };
+		97EAC39722FAA4680077509D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97EAC39522FAA4680077509D /* LaunchScreen.storyboard */; };
+		97EAC3A022FAA50E0077509D /* CircuitConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAC39F22FAA50E0077509D /* CircuitConfig.swift */; };
+		97EAC3A122FAA5130077509D /* CircuitGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAC39D22FAA5000077509D /* CircuitGenerator.swift */; };
+		97EAC3A222FAA58E0077509D /* SteppingGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAC38422FAA3690077509D /* SteppingGenerator.swift */; };
+		97EAC3A322FAA58F0077509D /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C67221562F50004697D /* Benchmark.swift */; };
+		97EAC3A422FAA58F0077509D /* AdditiveGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314D922156DA9008F4C5F /* AdditiveGenerator.swift */; };
+		97EAC3A522FAA58F0077509D /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC05CB2215651800780F94 /* Configurable.swift */; };
+		97EAC3A622FAA58F0077509D /* ColorsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314DC22156DEE008F4C5F /* ColorsConfig.swift */; };
+		97EAC3A722FAA58F0077509D /* RenderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E022156E89008F4C5F /* RenderConfig.swift */; };
+		97EAC3A822FAA58F0077509D /* SteppingGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAC38422FAA3690077509D /* SteppingGenerator.swift */; };
+		97EAC3A922FAA58F0077509D /* CGPoint+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C69221562F50004697D /* CGPoint+SY.swift */; };
+		97EAC3AA22FAA58F0077509D /* MassPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314F12215A6E9008F4C5F /* MassPoint.swift */; };
+		97EAC3AB22FAA58F0077509D /* Pointable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E422159F76008F4C5F /* Pointable.swift */; };
+		97EAC3AC22FAA58F0077509D /* PolarPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314E722159FDC008F4C5F /* PolarPoint.swift */; };
+		97EAC3AD22FAA58F0077509D /* UIBezierPath+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C6A221562F50004697D /* UIBezierPath+SY.swift */; };
+		97EAC3AE22FAA58F0077509D /* CGVector+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314F72215AA95008F4C5F /* CGVector+SY.swift */; };
+		97EAC3AF22FAA58F0077509D /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C68221562F50004697D /* Maths.swift */; };
+		97EAC3B022FAA58F0077509D /* UIColor+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97262C6B221562F50004697D /* UIColor+SY.swift */; };
+		97EAC3B122FAA58F0077509D /* UISegmentedControl+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314EB2215A134008F4C5F /* UISegmentedControl+SY.swift */; };
+		97EAC3B222FAA58F0077509D /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972314EE2215A29D008F4C5F /* Colorable.swift */; };
 		A12E7CC753F6DA9A816F051F /* Pods_Rond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ED69A5973B0A1485EB08D9 /* Pods_Rond.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +117,16 @@
 		97CC05C92215650700780F94 /* RondConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RondConfig.swift; sourceTree = "<group>"; };
 		97CC05CB2215651800780F94 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		97CC05CE221566BE00780F94 /* GrilleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrilleConfig.swift; sourceTree = "<group>"; };
+		97EAC38422FAA3690077509D /* SteppingGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppingGenerator.swift; sourceTree = "<group>"; };
+		97EAC38A22FAA4670077509D /* Circuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97EAC38C22FAA4670077509D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		97EAC38E22FAA4670077509D /* CircuitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitVC.swift; sourceTree = "<group>"; };
+		97EAC39122FAA4670077509D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97EAC39322FAA4680077509D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97EAC39622FAA4680077509D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97EAC39822FAA4680077509D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97EAC39D22FAA5000077509D /* CircuitGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitGenerator.swift; sourceTree = "<group>"; };
+		97EAC39F22FAA50E0077509D /* CircuitConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitConfig.swift; sourceTree = "<group>"; };
 		9D7741972A80571BA1AF4765 /* Pods-Grille.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grille.release.xcconfig"; path = "Target Support Files/Pods-Grille/Pods-Grille.release.xcconfig"; sourceTree = "<group>"; };
 		D24EDFAF08F8E13541E07A71 /* Pods_Grille.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grille.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94F6F07691516271CB81EAE /* Pods-Rond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rond.release.xcconfig"; path = "Target Support Files/Pods-Rond/Pods-Rond.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +146,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				85083A08C7329C40AB9EB67E /* Pods_Grille.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97EAC38722FAA4670077509D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +186,7 @@
 				97CC05CB2215651800780F94 /* Configurable.swift */,
 				972314DC22156DEE008F4C5F /* ColorsConfig.swift */,
 				972314E022156E89008F4C5F /* RenderConfig.swift */,
+				97EAC38422FAA3690077509D /* SteppingGenerator.swift */,
 			);
 			path = Generator;
 			sourceTree = "<group>";
@@ -177,6 +220,7 @@
 				97262C66221562F50004697D /* Source-Common */,
 				97262C71221563060004697D /* Source-Rond */,
 				97262C872215631A0004697D /* Source-Grille */,
+				97EAC38B22FAA4670077509D /* Source-Circuit */,
 				97262C52221562A90004697D /* Products */,
 				04866587EB30923BCF0A7BBA /* Pods */,
 				41130F71654CB1DD5C8396CC /* Frameworks */,
@@ -188,6 +232,7 @@
 			children = (
 				97262C70221563060004697D /* Rond.app */,
 				97262C862215631A0004697D /* Grille.app */,
+				97EAC38A22FAA4670077509D /* Circuit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,6 +295,29 @@
 			name = Misc;
 			sourceTree = "<group>";
 		};
+		97EAC38B22FAA4670077509D /* Source-Circuit */ = {
+			isa = PBXGroup;
+			children = (
+				97EAC39F22FAA50E0077509D /* CircuitConfig.swift */,
+				97EAC39D22FAA5000077509D /* CircuitGenerator.swift */,
+				97EAC38E22FAA4670077509D /* CircuitVC.swift */,
+				97EAC39022FAA4670077509D /* Main.storyboard */,
+				97EAC39C22FAA47D0077509D /* Misc */,
+			);
+			path = "Source-Circuit";
+			sourceTree = "<group>";
+		};
+		97EAC39C22FAA47D0077509D /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				97EAC38C22FAA4670077509D /* AppDelegate.swift */,
+				97EAC39322FAA4680077509D /* Assets.xcassets */,
+				97EAC39522FAA4680077509D /* LaunchScreen.storyboard */,
+				97EAC39822FAA4680077509D /* Info.plist */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,13 +361,30 @@
 			productReference = 97262C862215631A0004697D /* Grille.app */;
 			productType = "com.apple.product-type.application";
 		};
+		97EAC38922FAA4670077509D /* Circuit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97EAC39922FAA4680077509D /* Build configuration list for PBXNativeTarget "Circuit" */;
+			buildPhases = (
+				97EAC38622FAA4670077509D /* Sources */,
+				97EAC38722FAA4670077509D /* Frameworks */,
+				97EAC38822FAA4670077509D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Circuit;
+			productName = Circuit;
+			productReference = 97EAC38A22FAA4670077509D /* Circuit.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		97262C49221562A90004697D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Syan.me;
 				TargetAttributes = {
@@ -308,6 +393,9 @@
 					};
 					97262C852215631A0004697D = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					97EAC38922FAA4670077509D = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
@@ -326,6 +414,7 @@
 			targets = (
 				97262C6F221563060004697D /* Rond */,
 				97262C852215631A0004697D /* Grille */,
+				97EAC38922FAA4670077509D /* Circuit */,
 			);
 		};
 /* End PBXProject section */
@@ -348,6 +437,16 @@
 				97262C932215631A0004697D /* LaunchScreen.storyboard in Resources */,
 				97262C902215631A0004697D /* Assets.xcassets in Resources */,
 				97262C8E2215631A0004697D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97EAC38822FAA4670077509D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97EAC39722FAA4680077509D /* LaunchScreen.storyboard in Resources */,
+				97EAC39422FAA4680077509D /* Assets.xcassets in Resources */,
+				97EAC39222FAA4670077509D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +599,7 @@
 				972314E822159FDC008F4C5F /* PolarPoint.swift in Sources */,
 				97262C73221563060004697D /* AppDelegate.swift in Sources */,
 				972314DD22156DEE008F4C5F /* ColorsConfig.swift in Sources */,
+				97EAC38522FAA3690077509D /* SteppingGenerator.swift in Sources */,
 				97CC05BE2215644A00780F94 /* UIBezierPath+SY.swift in Sources */,
 				97CC05BF2215644A00780F94 /* UIColor+SY.swift in Sources */,
 				972314F22215A6E9008F4C5F /* MassPoint.swift in Sources */,
@@ -526,10 +626,38 @@
 				972314E922159FDC008F4C5F /* PolarPoint.swift in Sources */,
 				97262C892215631A0004697D /* AppDelegate.swift in Sources */,
 				972314DE22156DEE008F4C5F /* ColorsConfig.swift in Sources */,
+				97EAC3A222FAA58E0077509D /* SteppingGenerator.swift in Sources */,
 				97CC05CD2215651800780F94 /* Configurable.swift in Sources */,
 				97CC05C32215644B00780F94 /* UIBezierPath+SY.swift in Sources */,
 				972314F32215A6E9008F4C5F /* MassPoint.swift in Sources */,
 				97CC05C42215644B00780F94 /* UIColor+SY.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97EAC38622FAA4670077509D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97EAC3AE22FAA58F0077509D /* CGVector+SY.swift in Sources */,
+				97EAC3A922FAA58F0077509D /* CGPoint+SY.swift in Sources */,
+				97EAC3A722FAA58F0077509D /* RenderConfig.swift in Sources */,
+				97EAC3B022FAA58F0077509D /* UIColor+SY.swift in Sources */,
+				97EAC38F22FAA4670077509D /* CircuitVC.swift in Sources */,
+				97EAC3A322FAA58F0077509D /* Benchmark.swift in Sources */,
+				97EAC3AA22FAA58F0077509D /* MassPoint.swift in Sources */,
+				97EAC3A022FAA50E0077509D /* CircuitConfig.swift in Sources */,
+				97EAC3A522FAA58F0077509D /* Configurable.swift in Sources */,
+				97EAC3A822FAA58F0077509D /* SteppingGenerator.swift in Sources */,
+				97EAC3AB22FAA58F0077509D /* Pointable.swift in Sources */,
+				97EAC3A422FAA58F0077509D /* AdditiveGenerator.swift in Sources */,
+				97EAC3A622FAA58F0077509D /* ColorsConfig.swift in Sources */,
+				97EAC3B222FAA58F0077509D /* Colorable.swift in Sources */,
+				97EAC3B122FAA58F0077509D /* UISegmentedControl+SY.swift in Sources */,
+				97EAC38D22FAA4670077509D /* AppDelegate.swift in Sources */,
+				97EAC3AF22FAA58F0077509D /* Maths.swift in Sources */,
+				97EAC3A122FAA5130077509D /* CircuitGenerator.swift in Sources */,
+				97EAC3AD22FAA58F0077509D /* UIBezierPath+SY.swift in Sources */,
+				97EAC3AC22FAA58F0077509D /* PolarPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +692,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				97262C922215631A0004697D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		97EAC39022FAA4670077509D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97EAC39122FAA4670077509D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		97EAC39522FAA4680077509D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97EAC39622FAA4680077509D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -763,6 +907,42 @@
 			};
 			name = Release;
 		};
+		97EAC39A22FAA4680077509D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79RY8264V4;
+				INFOPLIST_FILE = "$(SRCROOT)/Source-Circuit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.syan.Circuit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97EAC39B22FAA4680077509D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79RY8264V4;
+				INFOPLIST_FILE = "$(SRCROOT)/Source-Circuit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.syan.Circuit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -789,6 +969,15 @@
 			buildConfigurations = (
 				97262C962215631A0004697D /* Debug */,
 				97262C972215631A0004697D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97EAC39922FAA4680077509D /* Build configuration list for PBXNativeTarget "Circuit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97EAC39A22FAA4680077509D /* Debug */,
+				97EAC39B22FAA4680077509D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
